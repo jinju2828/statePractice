@@ -13,11 +13,11 @@ class App extends Component {
       value:0,
       diff:1
     };
-    this.onChange1 = this.onChange1.bind(this);
+    this.onChange = this.onChange.bind(this);
     this.onIncrement = this.onIncrement.bind(this);
     this.onDecrement = this.onDecrement.bind(this);
   }
-  onChange1(diff){
+  onChange(diff){
     this.setState({
       diff:diff
     });
@@ -37,7 +37,7 @@ class App extends Component {
     return(
         <div>
           <Counter value = {this.state.value} />
-          <Option diff = {this.state.diff} onChange = {this.onChange1} />
+          <Option diff = {this.state.diff} onChange = {this.onChange} />
           <Button onIncrement = {this.onIncrement} onDecrement = {this.onDecrement} />
         </div>
     );

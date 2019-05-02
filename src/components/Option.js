@@ -3,15 +3,15 @@ import React, { Component } from 'react';
 class Option extends Component {
     constructor(props){
         super(props);
-        this.onChange1 = this.onChange1.bind(this);
+        this.onChange = this.onChange.bind(this);
     }
-    onChange1(event){
-        this.props.onChange1(event.target.value);
+    onChange(event){
+        this.props.onChange(event.target.value);
     }
     render(){
         return(
             <div>
-                <input value = {this.props.diff} onChange={this.onChange1} />
+                <input value = {this.props.diff} onChange={this.onChange} />
             </div>
         );
     }
